@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вера Хоружая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефросинья Полоцкая</a>
+                <a href="./Вера Хоружая.html" id="main_txt">Вера Хоружая</a>
+                <a href="./Софья Гольшанская.html">Софья Гольшанская</a>
+                <a href="">text4</a>
+                <a href="">text5</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Вера Хоружая (1903 — 1942)</h1>
+
+    <div>
+        Вера Захаровна Хоружая — легендарная партизанка, подпольщица, публицист и Герой Советского Союза. Её жизнь стала символом невероятной стойкости и преданности своим идеалам.
+    </div>
+
+    <h2>Кто она такая?</h2>
+    <p>Вера родилась в Бобруйске в семье рабочего. С юных лет она включилась в политическую борьбу. Это была женщина с «железным» характером: она работала учителем, журналистом и была одним из руководителей коммунистического подполья в Западной Беларуси, когда та входила в состав Польши.</p>
+
+    <h2>Чем она известна и её подвиги:</h2>
+    <ul>
+        <li><strong>Борьба в Западной Беларуси:</strong> За свою подпольную деятельность она была арестована польскими властями и провела в тюрьмах в общей сложности около 7 лет. Там она написала знаменитые «Письма на волю».</li>
+        <li><strong>«Анна Корнилова»:</strong> Во время Второй мировой войны, уже имея маленькую дочь и будучи в эвакуации, Вера добровольно отправилась на фронт. Под псевдонимом «Анна Корнилова» она возглавила подпольную группу в оккупированном Витебске.</li>
+        <li><strong>Сбор разведданных:</strong> Её группа передавала советскому командованию ценнейшие данные о передвижении немецких войск и расположении складов.</li>
+        <li><strong>Мужество перед лицом смерти:</strong> В ноябре 1942 года она была схвачена гестапо. Несмотря на страшные пытки, Вера не выдала ни одного имени и не раскрыла местонахождение своего отряда. Она была казнена, так и не нарушив молчания.</li>
+    </ul>
+
+    <h2>Память и награды</h2>
+    <p>В 1960 году Вере Хоружей было посмертно присвоено звание <strong>Героя Советского Союза</strong>. В её честь названы улицы во многих городах Беларуси (самая известная — в Минске), установлены памятники, а её биография изучается как пример самопожертвования ради Родины.</p>
+    </div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/H1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/H2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/H3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

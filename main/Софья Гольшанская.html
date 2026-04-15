@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Софья Гольшанская</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефросинья Полоцкая</a>
+                <a href="./Вера Хоружая.html">Вера Хоружая</a>
+                <a href="./Софья Гольшанская.html" id="main_txt">Софья Гольшанская</a>
+                <a href="">text4</a>
+                <a href="">text5</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Софья Гольшанская (ок. 1405 — 1461)</h1>
+
+    <div>
+        Софья (Сонка) Гольшанская — четвертая и последняя жена короля Владислава II Ягайло, королева Польши и родоначальница династии Ягеллонов, которая правила Центральной и Восточной Европой более 200 лет.
+    </div>
+
+    <h2>Кто она такая?</h2>
+    <p>Княжна из знатного белорусского рода Гольшанских. Её жизнь напоминает сказку: в 17 лет она вышла замуж за 71-летнего короля Ягайло. Несмотря на огромную разницу в возрасте, интриги при дворе и обвинения в неверности, она сумела стать одной из самых влиятельных женщин своего времени.</p>
+
+    <h2>Чем она известна и её заслуги:</h2>
+    <ul>
+        <li><strong>Основание династии:</strong> Софья подарила Ягайло долгожданных наследников (Владислава III Варненчика и Казимира IV). Именно благодаря ей род Ягеллонов продолжился и стал одним из самых могущественных в истории Европы.</li>
+        <li><strong>Библия Софьи:</strong> По её инициативе был сделан первый полный перевод Библии на польский язык (так называемая <span>«Библия королевы Софьи»</span> или Шарошпатакская Библия). Это важнейший памятник культуры и языка.</li>
+        <li><strong>Политическая хватка:</strong> После смерти мужа она активно боролась за права своих сыновей на престол, умело маневрируя между интересами польской знати и Великого княжества Литовского.</li>
+        <li><strong>Меценатство:</strong> Софья активно поддерживала Краковскую академию (Ягеллонский университет) и занималась благотворительностью, восстанавливая храмы и помогая бедным.</li>
+    </ul>
+
+    <h2>Историческое наследие</h2>
+    <p>Её называют <strong>«Матерью королей»</strong>, так как её потомки занимали троны Польши, Литвы, Чехии и Венгрии. Она похоронена в Вавельском соборе в Кракове, а её жизнь до сих пор вдохновляет писателей и режиссеров на создание исторических драм.</p>
+    </div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/S1.png');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/S2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/S3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>
