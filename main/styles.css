@@ -42,7 +42,7 @@ header {
     overflow: auto;
 }
 .img_logo{
-    width: 80px;
+    width: 85px;
     height: 90px;
     overflow: hidden;
 }
@@ -67,13 +67,82 @@ header {
     text-decoration: underline 2px;
     text-underline-offset: 4px;
 }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 100%;
+}
+
+.txt_cont {
+    width: 90%;
+    height: 95%;
+}
 footer {
     width: 100%;
     min-height: 60px;    
     border-top: 1px solid #e0e0e0;
 }
 
-main {
-    width: 70vw;
-    min-height: 100vh;
-}
+.slider-container {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .nav-btn:hover { background: rgba(255, 255, 255, 0.5); }
+        .prev { left: 20px; }
+        .next { right: 20px; }
