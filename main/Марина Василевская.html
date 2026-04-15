@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марина Василевская</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефросинья Полоцкая</a>
+                <a href="./Вера Хоружая.html">Вера Хоружая</a>
+                <a href="./Софья Гольшанская.html">Софья Гольшанская</a>
+                <a href="./Дарья Домрачева.html">Дарья Домрачева</a>
+                <a href="./Марина Василевская.html" id="main_txt">Марина Василевская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Марина Василевская (род. 1990)</h1>
+
+    <div>
+        Марина Витальевна Василевская — первый космонавт в истории суверенной Беларуси. Она совершила полет на Международную космическую станцию (МКС) в марте 2024 года, став <span>Героем Беларуси</span>.
+    </div>
+
+    <div>Миссия: Союз МС-25 / МС-24</div>
+
+    <h2>Путь к звездам</h2>
+    <p>До того как попасть в отряд космонавтов, Марина работала бортпроводником-инструктором в авиакомпании «Белавиа». Из более чем двух тысяч претенденток она прошла строжайший медицинский и психологический отбор, доказав, что небо — это не предел, а лишь начало.</p>
+
+    <h2>Чем она известна и её миссия:</h2>
+    <ul>
+        <li><strong>Первопроходец:</strong> Она стала первой женщиной в истории независимой Беларуси, которая увидела Землю из иллюминатора космического корабля.</li>
+        <li><strong>Научная работа:</strong> В течение 12 суток на борту МКС Марина выполняла сложную научную программу: проводила эксперименты в области лактоферрина (медицина), изучала образцы микроорганизмов и делала детальную фотосъемку поверхности Беларуси из космоса.</li>
+        <li><strong>Символ перемен:</strong> Её полет закрепил за Беларусью статус космической державы, имеющей своих исследователей на орбите.</li>
+        <li><strong>Международный экипаж:</strong> Она летела вместе с опытным космонавтом Олегом Новицким (уроженцем Беларуси) и астронавтом NASA Лорел О’Хара.</li>
+    </ul>
+
+    <h2>Награды и признание</h2>
+    <p>По возвращении на Землю в апреле 2024 года Марина была удостоена высшей государственной награды — ордена <strong>Героя Беларуси</strong>. Её пример вдохновил тысячи молодых людей мечтать о науке и высоких технологиях.</p>
+    </div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/M1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/M2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/M3.jpeg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

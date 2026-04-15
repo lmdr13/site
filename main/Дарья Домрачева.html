@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дарья Домрачева</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефросинья Полоцкая</a>
+                <a href="./Вера Хоружая.html">Вера Хоружая</a>
+                <a href="./Софья Гольшанская.html">Софья Гольшанская</a>
+                <a href="./Дарья Домрачева.html" id="main_txt">Дарья Домрачева</a>
+                <a href="./Марина Василевская.html">Марина Василевская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Дарья Домрачева (род. 1986)</h1>
+
+    <div>
+        Дарья Владимировна Домрачева — выдающаяся белорусская биатлонистка, четырехкратная олимпийская чемпионка, двукратная чемпионка мира и первая в истории женщина-атлет, удостоенная высшего звания <span class="highlight">«Герой Беларуси»</span>.
+    </div>
+
+    <h2>Кто она такая?</h2>
+    <p>Дарья родилась в Минске в семье архитекторов, но спортивную карьеру начинала в России (в Нягани). В 2004 году она вернулась в Беларусь, чтобы выступать за родную страну. Её уникальный стиль хода на лыжах и воля к победе сделали её одной из самых быстрых и узнаваемых биатлонисток в истории.</p>
+
+    <h2>Главные достижения:</h2>
+    <table class="stats-table">
+        <tr>
+            <th>Событие</th>
+            <th>Награды</th>
+        </tr>
+        <tr>
+            <td><strong>Олимпиада в Сочи (2014)</strong></td>
+            <td>3 золотые медали (первая женщина, выигравшая три «золота» в личных гонках на одной ОИ)</td>
+        </tr>
+        <tr>
+            <td><strong>Олимпиада в Пхёнчхане (2018)</strong></td>
+            <td>1 золотая медаль (эстафета) и 1 серебряная</td>
+        </tr>
+        <tr>
+            <td><strong>Кубок мира</strong></td>
+            <td>Обладательница Большого хрустального глобуса (сезон 2014/2015)</td>
+        </tr>
+    </table>
+
+    <h2>Чем она запомнилась:</h2>
+    <ul>
+        <li><strong>«Золотой хет-трик» в Сочи:</strong> Дарья доминировала на трассе, показав феноменальную скорость и хладнокровие, что принесло ей три высшие награды за одну неделю.</li>
+        <li><strong>Невероятная воля:</strong> После тяжелой болезни (мононуклеоза) она смогла вернуться в большой спорт, снова выйти на пик формы и выиграть золото в 2018 году.</li>
+        <li><strong>Курьезные случаи:</strong> В начале карьеры она дважды путала стрельбу (стреляла стоя вместо лежа и даже по чужим мишеням), но эти ошибки лишь закалили её и сделали любимицей болельщиков за искренность.</li>
+        <li><strong>Спортивная семья:</strong> Дарья замужем за «королем биатлона» Уле-Эйнаром Бьёрндаленом, что делает их самой титулованной семейной парой в истории зимних видов спорта.</li>
+    </ul>
+
+    <h2>Жизнь после спорта</h2>
+    <p>Завершив карьеру в 2018 году, Дарья пробовала себя в роли тренера (работала со сборной Китая вместе с мужем) и дизайнера спортивной одежды. Для миллионов людей она остается символом того, что упорство и улыбка могут покорить любые вершины.</p>
+    </div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/D1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/D2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/D3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>
