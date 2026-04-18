@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Соф'я Кавалеўская (1850—1891)</h1>
+
+    <div>
+        Соф'я Васільеўна Кавалеўская — выдатны матэматык, механік і пісьменніца. Яна стала першай у свеце жанчынай-прафесарам матэматыкі, назаўжды ўвайшоўшы ў гісторыю як <span>сімвал інтэлектуальнай мужнасці і змагар за правы жанчын на адукацыю</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Матэматыка, механіка і літаратура</div>
+
+    <h2>Шлях да навукі</h2>
+    <p>Сваё дзяцінства Соф'я правяла ў маёнтку Палібіна (Віцебская губерня), дзе цікавасць да навукі прачнулася ў яе дзякуючы абклееным старонкамі з лекцыямі па матэматыцы сценам у пакоі. Паколькі ў Расійскай імперыі жанчынам быў забаронены доступ да вышэйшай адукацыі, яна заключыла фіктыўны шлюб з Уладзімірам Кавалеўскім, каб выехаць за мяжу. У Германіі яна брала прыватныя ўрокі ў выдатнага матэматыка Карла Веерштраса, даказаўшы, што для сапраўднага розуму не існуе сацыяльных перашкод.</p>
+
+    <h2>Чым яна вядомая і яе ўклад:</h2>
+    <ul>
+        <li><strong>Першапраходніца:</strong> Яна стала першай жанчынай, якая абараніла дысертацыю і атрымала ступень доктара філасофіі па матэматыцы, а таксама першай жанчынай-прафесарам у Паўночнай Еўропе (у Стакгольмскім універсітэце).</li>
+        <li><strong>Навуковая праца:</strong> Соф'я зрабіла найважнейшыя адкрыцці ў галіне матэматычнага аналізу. Яна вывела знакамітую тэарэму Кашы — Кавалеўскай і знайшла трэці класічны выпадак вырашэння складанай задачы аб вярчэнні цвёрдага цела вакол нерухомай кропкі (так званы «ваўчок Кавалеўскай»).</li>
+        <li><strong>Сімвал перамен:</strong> Яе неверагодны поспех і талент прымусілі кансерватыўную навуковую супольнасць XIX стагоддзя перагледзець сваё стаўленне да жанчын у дакладных навуках і адкрылі ім шлях у акадэмічны свет.</li>
+        <li><strong>Шматгранны талент:</strong> Акрамя геніяльных здольнасцей да матэматыкі, яна валодала бліскучым літаратурным дарам. Яе творы, такія як аповесць «Нігілістка» і «Успаміны дзяцінства», былі высока ацэнены сучаснікамі.</li>
+    </ul>
+
+    <h2>Спадчына і прызнанне</h2>
+    <p>За свае выбітныя даследаванні Соф'я Кавалеўская была ўдастоена прэмій Парыжскай і Шведскай акадэмій навук. Сёння ў яе гонар названы астэроід, кратар на Месяцы, навуковыя прэміі, а таксама шматлікія вуліцы і школы. Яе жыццёвы шлях працягвае натхняць жанчын па ўсім свеце <strong>выбіраць навуку</strong> і ісці да сваёй мары.</p>
+</div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

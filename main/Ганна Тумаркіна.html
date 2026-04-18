@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Ганна Тумаркіна (1875—1951)</h1>
+
+    <div>
+        Ганна Паўлаўна Тумаркіна — выдатная філосафка і першая жанчына ў Еўропе, якая стала прафесарам філасофіі. Яна нарадзілася ў Беларусі, але пабудавала бліскучую кар'еру ў Швейцарыі, стаўшы <span>сімвалам жаночай эмансіпацыі ў навуцы</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Філасофія, псіхалогія і эстэтыка</div>
+
+    <h2>Шлях да навукі</h2>
+    <p>Нарадзіўшыся ў горадзе Дуброўна (цяпер Віцебская вобласць), Ганна з ранняга ўзросту праяўляла выключныя здольнасці. Паколькі ў Расійскай імперыі таго часу жанчыны не мелі права на вышэйшую адукацыю, яна адправілася ў Швейцарыю. У Бернскім універсітэце яна бліскуча вучылася і абараніла дысертацыю, даказаўшы, што для сапраўднага розуму і прагі ведаў не існуе межаў і перашкод.</p>
+
+    <h2>Чым яна вядомая і яе ўклад:</h2>
+    <ul>
+        <li><strong>Першапраходніца:</strong> У 1909 годзе яна стала экстраардынарным прафесарам Бернскага ўніверсітэта. Ганна стала першай жанчынай у Еўропе, якая атрымала права прымаць іспыты ў дактарантаў і засядаць ва ўніверсітэцкім сенаце.</li>
+        <li><strong>Навуковая праца:</strong> На працягу свайго жыцця Ганна выконвала глыбокую даследчую працу: яна вывучала працы Іагана Готфрыда Гердэра, Баруха Спінозы, Імануіла Канта, а таксама даследавала ўзаемасувязь філасофіі, эстэтыкі і псіхалогіі, пакінуўшы пасля сябе шэраг фундаментальных кніг.</li>
+        <li><strong>Сімвал перамен:</strong> Яе поспех на акадэмічнай ніве стаў магутным прэцэдэнтам, які дапамог зламаць патрыярхальныя стэрэатыпы ў еўрапейскай сістэме адукацыі. Таксама яна актыўна падтрымлівала рух за выбарчае права для жанчын.</li>
+        <li><strong>Міжнародны ўплыў:</strong> Ураджэнка беларускай зямлі стала інтэлектуальнай зоркай сусветнага маштабу, чые наватарскія лекцыі збіралі студэнтаў і мысляроў з самых розных краін.</li>
+    </ul>
+
+    <h2>Спадчына і прызнанне</h2>
+    <p>Унёсак Ганны Тумаркінай у сусветную навуку высока ацэнены нашчадкамі. У яе гонар названая вуліца <strong>Tumarkinweg</strong>, якая прымыкае да будынка Бернскага ўніверсітэта. Яе гісторыя і сёння натхняе тысячы маладых жанчын марыць пра навуку, займацца даследаваннямі і верыць у свае сілы.</p>
+</div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

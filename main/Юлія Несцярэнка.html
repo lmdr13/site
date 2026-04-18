@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Юлія Несцярэнка (нар. 1979)</h1>
+
+    <div>
+        Юлія Віктараўна Несцярэнка — выдатная беларуская лёгкаатлетка, алімпійская чэмпіёнка ў спрынце. Яе нечаканая і бліскучая перамога на дыстанцыі 100 метраў прынесла ёй сусветную славу і ганаровую мянушку <span>«Белая маланка»</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Лёгкая атлетыка (кароткія дыстанцыі)</div>
+
+    <h2>Сенсацыя ў Афінах</h2>
+    <p>Юлія нарадзілася і пачала трэніравацца ў Брэсце. Доўгі час у жаночым спрынце безраздзельна панавалі спартсменкі з ЗША і краін Карыбскага басейна. Аднак на Алімпійскіх гульнях 2004 года ў Афінах беларуска разбурыла ўсе прагнозы. Яна прадэманстравала ідэальную тэхніку і неверагодную псіхалагічную вытрымку, абышоўшы прызнаных фаварытак планеты і ўпісаўшы сваё імя ў гісторыю сусветнага спорту.</p>
+
+    <h2>Што робіць яе гісторыю ўнікальнай:</h2>
+    <ul>
+        <li><strong>Гістарычнае золата:</strong> Юлія стала першай неамерыканскай бягухай з 1980 года, якой удалося заваяваць алімпійскае золата на самай прэстыжнай і хуткай дыстанцыі — 100 метраў.</li>
+        <li><strong>Фенаменальная стабільнасць:</strong> На шляху да фіналу яна бегла чатыры разы (кваліфікацыя, чвэрцьфінал, паўфінал і сам фінал). У кожным з гэтых забегаў Несцярэнка «выбегла» з 11 секунд, што з'яўляецца паказчыкам найвышэйшага майстэрства.</li>
+        <li><strong>Сімвал пераадолення:</strong> Нягледзячы на праблемы са здароўем і траўмы пасля Алімпіяды, Юлія не здалася. У 2005 годзе яна дапамагла зборнай Беларусі ўзяць бронзу ў эстафеце 4х100 метраў на чэмпіянаце свету ў Хельсінкі.</li>
+        <li><strong>Натхненне для моладзі:</strong> Яе трыумф выклікаў велізарны ўсплёск цікавасці да лёгкай атлетыкі ў Беларусі. Яна даказала маладым спартсменам, што дзякуючы ўпартай працы можна дасягнуць вяршынь нават там, дзе канкурэнцыя здаецца непераможнай.</li>
+    </ul>
+
+    <h2>Дзяржаўныя ўзнагароды і павага</h2>
+    <p>За свой выбітны спартыўны подзвіг Юлія Несцярэнка атрымала званне Заслужанага майстра спорту Рэспублікі Беларусь і была ўзнагароджана <strong>ордэнам Айчыны III ступені</strong>. Сёння легендарная чэмпіёнка працуе трэнерам, перадаючы свой неацэнны вопыт і пераможны дух новаму пакаленню беларускіх атлетаў.</p>
+</div>
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Алаіза Пашкевіч (Цётка) (1876—1916)</h1>
+
+    <div>
+        Алаіза Сцяпанаўна Пашкевіч, вядомая ў гісторыі пад псеўданімам Цётка, — выдатная беларуская паэтэса, асветніца і грамадская дзяячка. Яна прысвяціла сваё кароткае, але надзвычай яскравае жыццё нацыянальнаму адраджэнню, стаўшы <span>сапраўдным голасам беларускага народа ў эпоху вялікіх узрушэнняў</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Літаратура, педагогіка, публіцыстыка і рэвалюцыйны рух</div>
+
+    <h2>Жыццё дзеля ідэі</h2>
+    <p>Нарадзіўшыся на Шчучыншчыне, Алаіза з юнацтва востра адчувала сацыяльную несправядлівасць і прыгнёт роднай культуры. Яна атрымала адукацыю ў Вільні і Санкт-Пецярбургу, дзе хутка апынулася ў віры студэнцкага і палітычнага руху. Яе не задавальняла роля простага назіральніка: яна стала адной з заснавальніц Беларускай сацыялістычнай грамады і пачала нелегальна выдаваць літаратуру, рызыкуючы ўласнай свабодай дзеля правоў свайго краю.</p>
+
+    <h2>Што яна пакінула беларусам:</h2>
+    <ul>
+        <li><strong>Паэзія змагання:</strong> Яе знакамітыя паэтычныя зборнікі «Хрэст на свабоду» і «Скрыпка беларуская» былі надрукаваны таемна. У іх гучаў гарачы заклік да абуджэння нацыянальнай свядомасці, годнасці і веры ў лепшую долю для простага чалавека.</li>
+        <li><strong>Адукацыя для дзяцей:</strong> Цётка выдатна разумела, што будучыня нацыі пачынаецца з роднага слова. Яна стварыла першыя ў гісторыі падручнікі і кнігі для беларускіх дзяцей — «Беларускі гасцінец», «Лемантар» і «Першае чытанне для дзетак беларусаў».</li>
+        <li><strong>Журналістыка і тэатр:</strong> Алаіза стаяла каля вытокаў прафесійнай беларускай прэсы. Яна пісала вострыя артыкулы для «Нашай Нівы», была рэдактарам маладзёжнага часопіса «Лучынка», а таксама выступала як актрыса ў трупе Ігната Буйніцкага.</li>
+        <li><strong>Вышэйшая самаахвярнасць:</strong> Падчас Першай сусветнай вайны яна не змагла застацца ўбаку і адправілася працаваць сястрой міласэрнасці. Дапамагаючы і ратуючы хворых у тыфозных бараках, яна заразілася сама і трагічна пайшла з жыцця, не дажыўшы нават да сарака гадоў.</li>
+    </ul>
+
+    <h2>Гістарычная важнасць і памяць</h2>
+    <p>Алаіза Пашкевіч стала <strong>бясспрэчным сімвалам самаадданай любові да Бацькаўшчыны</strong>. Сёння яе вершы вывучаюць у школах, у яе гонар названы вуліцы і бібліятэкі, устаноўлены помнікі. Яе непаўторны вобраз і творчая спадчына дагэтуль нагадваюць нам пра тое, якую стваральную сілу маюць шчырае слова і гатоўнасць служыць свайму народу да апошняга ўздыху.</p>
+</div> 
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

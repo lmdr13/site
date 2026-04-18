@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Любоў Хатылёва (1928—2024)</h1>
+
+    <div>
+        Любоў Уладзіміраўна Хатылёва — знакамітая беларуская даследчыца, акадэмік НАН Беларусі і адна з ключавых постацей у айчыннай біялогіі. Усё сваё жыццё яна прысвяціла вывучэнню спадчыннасці раслін, заслужыўшы <span>сусветнае прызнанне ў галіне матэматычнай генетыкі</span>.
+    </div>
+
+    <div>Галоўны кірунак: Генетыка, матэматычная біялогія і селекцыя</div>
+
+    <h2>Станаўленне і навуковы старт</h2>
+    <p>Будучы акадэмік нарадзілася ў Гомелі, а пасля вайны паспяхова скончыла Беларускі дзяржаўны ўніверсітэт. Яе кар'ера пачалася ў вельмі складаны час, калі класічная генетыка перажывала ідэалагічны ўціск. Аднак выключны аналітычны розум і мэтанакіраванасць дазволілі ёй не толькі абараніць навуковую ісціну, але і ўзначаліць Інстытут генетыкі і цыталогіі АН БССР, якім яна кіравала амаль дваццаць гадоў.</p>
+
+    <h2>Галоўныя дасягненні ў біялогіі:</h2>
+    <ul>
+        <li><strong>Наватарскі падыход:</strong> Хатылёва адной з першых у Савецкім Саюзе злучыла біялогію са статыстыкай. Яна пачала актыўна ўкараняць матэматычныя мадэлі ў планаванне эксперыментаў, што істотна паскорыла працэс вывядзення новых гатункаў.</li>
+        <li><strong>Разгадка гетэрозісу:</strong> У цэнтры яе ўвагі была гібрыдная магутнасць (гетэрозіс) — з'ява, калі нашчадкі пераўзыходзяць бацькоўскія формы па жыццяздольнасці. Распрацаваныя ёй метады ацэнкі дапамаглі стварыць высокаўраджайныя гібрыды таматаў, перцаў і сельскагаспадарчых збожжавых.</li>
+        <li><strong>Стварэнне ўласнай школы:</strong> За дзесяцігоддзі плённай працы яна выхавала цэлую пляяду таленавітых генетыкаў. Пад яе непасрэдным кіраўніцтвам былі абаронены дзясяткі кандыдацкіх і доктарскіх дысертацый, а беларуская навуковая школа набыла міжнародную вагу.</li>
+        <li><strong>Захаванне традыцый:</strong> З'яўляючыся прэзідэнтам Беларускага таварыства генетыкаў і селекцыянераў, Любоў Уладзіміраўна шмат зрабіла для інтэграцыі айчыннай навукі ў сусветную супольнасць і каардынацыі важных даследаванняў.</li>
+    </ul>
+
+    <h2>Дзяржаўная ацэнка і памяць</h2>
+    <p>Вынікі працы Любові Уладзіміраўны адзначаны высокім званнем <strong>Заслужанага дзеяча навукі БССР</strong>, ордэнамі Працоўнага Чырвонага Сцяга і Францыска Скарыны. Яна пакінула пасля сябе больш за 400 навуковых прац, а яе ўнікальныя мадэлі да гэтага часу дапамагаюць сучасным селекцыянерам забяспечваць нашы сталы якаснымі і карыснымі прадуктамі.</p>
+</div>   
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

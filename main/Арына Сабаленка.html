@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Арына Сабаленка (нар. 1998)</h1>
+
+    <div>
+        Арына Сяргееўна Сабаленка — выдатная беларуская тэнісістка, шматразовая пераможца турніраў Вялікага шлема. Яе звышмагутная гульня і прага да перамогі зрабілі яе <span>адной з самых дамінуючых і папулярных спартсменак сучаснага сусветнага тэніса</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Вялікі тэніс</div>
+
+    <h2>Шлях да вяршыні</h2>
+    <p>Арына нарадзілася ў Мінску. Бацька выпадкова прывёў яе на тэнісныя корты ў дзяцінстве, і гэта спантаннае рашэнне вызначыла лёс дзяўчынкі. З ранніх гадоў яна вылучалася выключнай фізічнай сілай і бескампрамісным стылем гульні. Дзякуючы тытанічнай працы, характару і ўменню трымаць удар, яна хутка ўварвалася ў эліту Жаночай тэніснай асацыяцыі (WTA), прымусіўшы лічыцца з сабой самых тытулаваных саперніц.</p>
+
+    <h2>Галоўныя трыумфы і спартыўны стыль:</h2>
+    <ul>
+        <li><strong>Каралева харда:</strong> Арына дасягнула выбітных вынікаў на самых прэстыжных кортах свету. Яна з'яўляецца шматразовай чэмпіёнкай Адкрытага чэмпіянату Аўстраліі (Australian Open) і пераможцай Адкрытага чэмпіянату ЗША (US Open), дзе дэманстравала фенаменальны ўзровень канцэнтрацыі.</li>
+        <li><strong>Першая ракетка свету:</strong> Сабаленка дабілася ўнікальнага дасягнення, здолеўшы ў розныя гады ўзначаліць сусветны рэйтынг WTA як у адзіночным, так і ў парным разрадах (у дуэце з Элізэ Мертэнс).</li>
+        <li><strong>Стыль «тыгрыцы»:</strong> Яе візітнай карткай стаў агрэсіўны, сілавы тэніс са знішчальнымі ўдарамі на задняй лініі і гарматнай падачай. Татуіроўка тыгра на яе руцэ ідэальна адлюстроўвае баявы настрой і нязломнасць на корце.</li>
+        <li><strong>Псіхалагічная ўстойлівасць:</strong> Сабаленка даказала, што здольная пераадольваць глыбокія спартыўныя крызісы. Справіўшыся з праблемамі ў падачы і эмацыянальным ціскам, яна вярнулася ў тур яшчэ больш моцнай, сканцэнтраванай і ўпэўненай у сабе.</li>
+    </ul>
+
+    <h2>Сучасны статус і ўплыў</h2>
+    <p>Сёння Арына Сабаленка — гэта не проста чэмпіёнка, а <strong>глабальны брэнд у свеце спорту</strong>. Яе неверагодная энергетыка, шчырасць у інтэрв'ю і здольнасць ператвараць кожны матч у яркае шоу збіраюць мільёны прыхільнікаў па ўсёй планеце. Яна працягвае перапісваць гісторыю беларускага тэніса, натхняючы новае пакаленне ніколі не здавацца перад цяжкасцямі.</p>
+</div>    
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

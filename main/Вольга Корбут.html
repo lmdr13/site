@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Вольга Корбут (нар. 1955)</h1>
+
+    <div>
+        Вольга Валянцінаўна Корбут — выдатная беларуская гімнастка, чатырохразовая алімпійская чэмпіёнка. Яна назаўжды змяніла аблічча спартыўнай гімнастыкі, дадаўшы ў яе неверагодную акрабатыку і стаўшы <span>сімвалам спартыўнай рэвалюцыі ХХ стагоддзя</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Спартыўная гімнастыка</div>
+
+    <h2>Рэвалюцыя на памосце</h2>
+    <p>Вольга нарадзілася ў Гродне, дзе і пачаўся яе шлях у вялікі спорт. Яе тандэм з наватарскім трэнерам Рэнальдам Кнышам прывёў да стварэння зусім новага стылю. Замест павольных, балетных рухаў, якія панавалі тады ў жаночай гімнастыцы, дзяўчына пачала дэманстраваць рызыкоўныя акрабатычныя трукі і неверагодную дынаміку, прымушаючы гледачоў затрымліваць дыханне.</p>
+
+    <h2>Чым яна ўвайшла ў гісторыю:</h2>
+    <ul>
+        <li><strong>«Пятля Корбут»:</strong> Яна першай у свеце выканала ўнікальны і небяспечны элемент на разнавысокіх брусах — сальта назад з верхняй перакладзіны. Сёння гэты трук афіцыйна забаронены ў спорце з-за яго надзвычайнай складанасці і рызыкі.</li>
+        <li><strong>Трыумф у Мюнхене:</strong> На Алімпійскіх гульнях 1972 года яна заваявала тры залатыя медалі і адзін сярэбраны, ператварыўшыся ў абсалютную зорку сусветнага маштабу.</li>
+        <li><strong>«Цуд з касічкамі»:</strong> Яе шчырасць, дзіцячая непасрэднасць, светлыя ўсмешкі і нават горкія слёзы пасля памылак цалкам разбурылі заходні стэрэатып пра «халодных і бязэмацыйных» савецкіх спартсменаў.</li>
+        <li><strong>Гімнастычны бум:</strong> Дзякуючы неверагоднай харызме Вольгі гімнастыка стала звышпапулярнай. Пасля яе трыумфу ў многіх краінах свету (асабліва ў ЗША) адкрыліся тысячы новых спартыўных школ, куды бацькі масава павялі сваіх дзяцей.</li>
+    </ul>
+
+    <h2>Сусветнае прызнанне і спадчына</h2>
+    <p>Імя Вольгі Корбут па праве ўключана ў <strong>Міжнародную залу славы гімнастыкі</strong>. Яе спартыўнае дзярзновенне, артыстызм і бясстрашнасць ператварылі гімнастыку з кансерватыўнай дысцыпліны ў адно з самых відовішчных спаборніцтваў сучаснасці, а сама яна назаўсёды засталася ў сэрцах аматараў спорту як легендарная «верабейка з Гродна».</p>
+</div>
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

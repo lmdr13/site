@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Анастасія Слуцкая (каля 1473 — 1524)</h1>
+
+    <div>
+        Анастасія Слуцкая — выдатная беларуская княгіня з роду Алелькавічаў. У самы змрочны і небяспечны час яна ўзяла ў рукі зброю і ўзначаліла абарону свайго княства ад крымскіх татар, стаўшы <span>легендарным сімвалам мужнасці і патрыятызму</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Дзяржаўнае кіраванне і ваенная справа</div>
+
+    <h2>Выклік лёсу і абарона горада</h2>
+    <p>Жыццё Анастасіі падзялілася на дзве часткі пасля раптоўнай смерці яе мужа, князя Сямёна Алелькавіча, у 1503 годзе. На пачатку XVI стагоддзя беларускія землі цярпелі ад бясконцых і разбуральных набегаў крымскіх татар. Застаўшыся з малалетнім сынам-спадчыннікам на руках, княгіня адмовілася здавацца і ўцякаць у бяспечнае месца. Яна апранула рыцарскі даспех і асабіста ўзяла адказнасць за лёс цэлага горада.</p>
+
+    <h2>Чым яна ўвайшла ў гісторыю:</h2>
+    <ul>
+        <li><strong>Непрабіўны шчыт:</strong> У 1505 і 1506 гадах шматтысячная татарская арда брала Слуцк у жорсткую аблогу. Дзякуючы бліскучай абарончай стратэгіі, якую наладзіла Анастасія, горад выстаяў, нягледзячы на жудасныя пажары і спробы прарыву варожых войскаў.</li>
+        <li><strong>Асабісты гераізм:</strong> Гістарычныя паданні сведчаць, што княгіня не адседжвалася ў палацы. Верхам на кані яна аб'язджала баявыя пазіцыі, уласным прыкладам натхняючы воінаў на змаганне. За гэтую бясстрашнасць яе часта называюць «беларускай Жаннай д’Арк».</li>
+        <li><strong>Мудрая гаспадыня:</strong> Пасля адыходу ворагаў Анастасія праявіла сябе як надзвычай таленавіты адміністратар. Яна хутка аднаўляла драўляныя ўмацаванні і спаленыя дамы, падтрымлівала гандаль і развіццё рамёстваў, не дазволіўшы эканоміцы княства абрынуцца.</li>
+        <li><strong>Захаванне дынастыі:</strong> Галоўнай мэтай княгіні было зберагчы незалежнасць зямель для свайго сына Юрыя. Яна паспяхова кіравала Слуцкам, пакуль юнак не падрос і не ўзяў уладу ў свае рукі, стаўшы пазней выдатным палкаводцам і абаронцам Бацькаўшчыны.</li>
+    </ul>
+
+    <h2>Спадчына і нацыянальны гонар</h2>
+    <p>Вобраз Анастасіі Слуцкай назаўжды застаўся ў памяці беларускага народа як <strong>увасабленне жаночай сілы і бязмежнай любові да роднай зямлі</strong>. Сёння ў Слуцку ёй устаноўлены велічны помнік, а яе гісторыі прысвечаны нацыянальны мастацкі фільм. Яна даказала свету, што ў моманты найвышэйшай небяспекі жанчына здольная стаць непераможнай перашкодай для любога ворага.</p>
+</div>  
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ефросинья Полоцкая</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>
+            <div class = "menu_cont">
+                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
+                <a href="./Вера Хоружая.html">Вера Харужая</a>
+                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
+                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
+                <a href="./Марина Василевская.html">Марына Васілеўская</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="block">
+        <div class="txt_cont">
+        <h1>Княгіня Вольга (каля 890 — 969)</h1>
+
+    <div>
+        Княгіня Вольга — выдатная кіраўніца Кіеўскай Русі і першая жанчына на чале ўсходнеславянскай дзяржавы. Яна ўвайшла ў гісторыю не толькі як суровая помсніца за смерць мужа, але і як мудрая стваральніца, стаўшы <span>першай дзяржаўнай дзяячкай на Русі, якая прыняла хрысціянства</span>.
+    </div>
+
+    <div>Сфера дзейнасці: Дзяржаўнае кіраванне, дыпламатыя і палітыка</div>
+
+    <h2>Шлях да ўлады</h2>
+    <p>Паходжанне Вольгі дагэтуль ахутана шматлікімі летапіснымі легендамі. Яе шлях да аднаасобнага кіравання пачаўся з трагедыі: у 945 годзе паўстаўшыя драўляне забілі яе мужа, князя Ігара. Застаўшыся з малалетнім сынам Святаславам на руках, Вольга жорстка падавіла бунт, пасля чаго ўзяла ўладу ў свае рукі. У цяжкі час яна паказала сябе як вельмі прагматычны і моцны лідар, здольны ўтрымаць велізарную краіну ад распаду.</p>
+
+    <h2>Чым яна вядомая і яе гістарычны ўклад:</h2>
+    <ul>
+        <li><strong>Адміністрацыйная рэформа:</strong> Вольга першай на Русі ўпарадкавала сістэму збору падаткаў. Яна ўстанавіла фіксаваныя памеры даніны («урокі») і стварыла апорныя цэнтры княжацкай улады («пагосты»), што заклала трывалыя асновы дзяржаўнай эканомікі і права.</li>
+        <li><strong>Легенда пра Віцебск:</strong> Імя княгіні цесна звязана з беларускімі землямі. Згодна з паданнямі Віцебскага летапісу, менавіта Вольга з'яўляецца заснавальніцай Віцебска. Паводле легенды, яна была так уражана прыгажосцю гары ля зліцця рэк Заходняй Дзвіны і Віцьбы, што загадала закласці там драўляныя замкі і пабудаваць царкву.</li>
+        <li><strong>Духоўны выбар:</strong> У 957 годзе княгіня здзейсніла маштабны дыпламатычны візіт у Канстанцінопаль, дзе прыняла хрышчэнне. Гэты асабісты крок стаў пачаткам цывілізацыйнага павароту ўсходніх славян, які праз дзесяцігоддзі завершыць яе ўнук Уладзімір.</li>
+        <li><strong>Мірная дыпламатыя і абарона:</strong> Замест бесперапынных ваенных паходаў, якімі захапляўся яе сын Святаслаў, яна аддавала перавагу палітычным перамовам і ўмацаванню межаў. Больш за тое, у 968 годзе, будучы ўжо ў сталым узросце, яна асабіста кіравала гераічнай абаронай Кіева ад набегу печанегаў.</li>
+    </ul>
+
+    <h2>Памяць і кананізацыя</h2>
+    <p>За яе выбітныя заслугі ў пашырэнні хрысціянскай веры і падрыхтоўку глебы для Хрышчэння Русі праваслаўная царква прылічыла княгіню Вольгу да ліку святых як <strong>роўнаапостальную</strong> (такога гонару ў гісторыі ўдастоіліся толькі шэсць жанчын). Яе гістарычны вобраз праз тысячагоддзе застаецца велічным увасабленнем жаночай сілы, палітычнай мудрасці і непахіснай волі.</p>
+</div>  
+    <div class="slider-container">
+    <div class="slider-track" id="track">
+        <div class="slide" style="background-image: url('../sources/E1.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E2.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('../sources/E3.jpg');">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dotsContainer');
+    let currentIndex = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+</script>
+    </main>
+
+    <footer class="block"></footer>
+</body>
+</html>
