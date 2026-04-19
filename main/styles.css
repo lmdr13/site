@@ -38,7 +38,7 @@ header {
     align-items: center;
     width: 90%;
     height: 100%;
-    overflow: auto;
+    overflow: visible;
 }
 .img_logo{
     width: 85px;
@@ -156,65 +156,62 @@ footer {
 .stats-table th {
     background-color: #f8f9fa;
 }
-
+strong, h1, h2, table {
+    color: #58995c; 
+}
 .menu-wrapper {
-            position: relative; 
-            display: inline-block; /* Каб кантэйнер быў па памеры кнопкі */
-        }
+    position: relative; 
+    display: inline-block;
+}
 
-        .menu-trigger {
-            background: #fff;
-            border: 2px solid #333;
-            padding: 10px 20px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        /* Выпадальнае акно */
-        .dropdown-box {
-            display: none;
-            position: absolute; /* Пазіцыя адносна .menu-wrapper */
-            top: 100%;          /* Роўна пад ніжнім краем кнопкі */
-            left: 0;            /* Выраўноўванне па левым краі кнопкі */
-            margin-top: 8px;    /* Невялікі водступ ад кнопкі */
-            
-            background: #ffffff;
-            border: 1px solid #ccc;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            padding: 20px;
-            z-index: 999;
-            min-width: 500px;   /* Шырыня акна */
-            border-radius: 4px;
-        }
-
-        .dropdown-box.show {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* Стылі для раздзелаў */
-        .category-title {
-            font-size: 12px;
-            color: #777;
-            text-transform: uppercase;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-        }
-
-        .category-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .category-links li { margin-bottom: 5px; }
-
-        .category-links a {
-            text-decoration: none;
-            color: #0056b3;
-        }
-
-        .category-links a:hover { text-decoration: underline; }
+.menu-trigger {
+    background: #fff;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+.menu-trigger:hover {
+    background-color: #eeeeee;
+}
+.dropdown-box {
+    display: none;
+    position: absolute; 
+    top: 100%;          
+    right: 0;           
+    margin-top: 8px;   
+    
+    background: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 999;
+    min-width: 500px;
+    border-radius: 4px;
+}
+.dropdown-box.show {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.category-title {
+    font-size: 12px;
+    color: #777;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.category-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.category-links li { margin-bottom: 5px; }
+.category-links a {
+    text-decoration: none;
+    color: #0056b3;
+}
+.category-links a:hover { text-decoration: underline; }

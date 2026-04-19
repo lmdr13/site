@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Марина Василевская</title>
+    <title>Марына Васілеўская</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -12,14 +12,48 @@
             <a href="./main.html">
                 <img src ="../sources/logo1.jpg" class="img_logo">
             </a>
-            <div class = "menu_cont">
-                <a href="./Ефросинья Полоцкая.html">Ефрасіння Полацкая</a>
-                <a href="./Вера Хоружая.html">Вера Харужая</a>
-                <a href="./Софья Гольшанская.html">Соф’я Гальшанская</a>
-                <a href="./Дарья Домрачева.html">Дар’я Домрачава</a>
-                <a href="./Марина Василевская.html" id="main_txt">Марына Васілеўская</a>
+            <div class="menu-wrapper">
+            <button class="menu-trigger" id="btn">Меню ▾</button>
+
+            <div class="dropdown-box" id="box">
+                <div>
+                    <div class="category-title">Навука і адукацыя</div>
+                    <ul class="category-links">
+                        <li><a href="./Ганна Тумаркіна.html">Ганна Тумаркіна</a></li>
+                        <li><a href="./Соф'я Кавалеўская.html">Соф’я Кавалеўская</a></li>
+                        <li><a href="./Любоў Хатылёва.html">Любоў Хатылёва</a></li>
+                        <li><a href="./Марына Васілеўская.html">Марына Васілеўская</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="category-title">Культура і мастацтва</div>
+                    <ul class="category-links">
+                        <li><a href="./Ефрасіння Полацкая.html">Ефрасіння Полацкая</a></li>
+                        <li><a href="./Францішка Урсула Радзівіл.html">Францішка Урсула Радзівіл</a></li>
+                        <li><a href="./Алаіза Пашкевіч.html">Алаіза Пашкевіч</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="category-title">Спорт</div>
+                    <ul class="category-links">
+                        <li><a href="./Дар’я Домрачава.html">Дар’я Домрачава</a></li>
+                        <li><a href="./Вольга Корбут.html">Вольга Корбут</a></li>
+                        <li><a href="./Юлія Несцярэнка.html">Юлія Несцярэнка</a></li>
+                        <li><a href="./Арына Сабаленка.html">Арына Сабаленка</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="category-title">Гісторыя і подзвігі</div>
+                    <ul class="category-links">
+                        <li><a href="./Вера Харужая.html">Вера Харужая</a></li>
+                        <li><a href="./Княгіня Вольга.html">Княгіня Вольга</a></li>
+                        <li><a href="./Анастасія Слуцкая.html">Анастасія Слуцкая</a></li>
+                        <li><a href="./Соф’я Гальшанская.html">Соф’я Гальшанская </a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+            </div>
     </header>
 
     <main class="block">
@@ -65,7 +99,7 @@
     <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
 </div>
-
+<script src="../sources/script.js"></script>
 <script>
     const track = document.getElementById('track');
     const slides = document.querySelectorAll('.slide');
