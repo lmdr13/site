@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Віктарына</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <header class="block">
+        <div class="header_cont">
+            <a href="./main.html">
+                <img src ="../sources/logo1.jpg" class="img_logo">
+            </a>            
+            <div class="menu-wrapper">
+            <div class="gl_cont">
+                <a class="gl_txt" href="./main.html">Главная страница</a>
+            </div>
+            <div class="gl_cont">
+                <a class="gl_txt" href="./Віктарына.html">Віктарына</a>
+            </div>
+            <button class="menu-trigger" id="btn">Меню ▾</button>
+
+            <div class="dropdown-box" id="box">
+                <div>
+                    <div class="category-title">Навука і адукацыя</div>
+                    <ul class="category-links">
+                        <li><a href="./Ганна Тумаркіна.html">Ганна Тумаркіна</a></li>
+                        <li><a href="./Соф'я Кавалеўская.html">Соф’я Кавалеўская</a></li>
+                        <li><a href="./Любоў Хатылёва.html">Любоў Хатылёва</a></li>
+                        <li><a href="./Марына Васілеўская.html">Марына Васілеўская</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="category-title">Культура і мастацтва</div>
+                    <ul class="category-links">
+                        <li><a href="./Ефрасіння Полацкая.html">Ефрасіння Полацкая</a></li>
+                        <li><a href="./Францішка Урсула Радзівіл.html">Францішка Урсула Радзівіл</a></li>
+                        <li><a href="./Алаіза Пашкевіч.html">Алаіза Пашкевіч</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="category-title">Спорт</div>
+                    <ul class="category-links">
+                        <li><a href="./Дар’я Домрачава.html">Дар’я Домрачава</a></li>
+                        <li><a href="./Вольга Корбут.html">Вольга Корбут</a></li>
+                        <li><a href="./Юлія Несцярэнка.html">Юлія Несцярэнка</a></li>
+                        <li><a href="./Арына Сабаленка.html">Арына Сабаленка</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="category-title">Гісторыя і подзвігі</div>
+                    <ul class="category-links">
+                        <li><a href="./Вера Харужая.html">Вера Харужая</a></li>
+                        <li><a href="./Княгіня Вольга.html">Княгіня Вольга</a></li>
+                        <li><a href="./Анастасія Слуцкая.html">Анастасія Слуцкая</a></li>
+                        <li><a href="./Соф’я Гальшанская.html">Соф’я Гальшанская </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            </div>
+    </header>
+
+    <main class="block quiz">
+        <form id="quiz-form">
+            
+            <div class="question" data-ans="Алаіза Пашкевіч">
+                <h3>1. Хто з гэтых дзеячаў культуры была сястрой міласэрнасці ў Першую сусветную вайну і пісала пад псеўданімам «Цётка»?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q1" value="Алаіза Пашкевіч"> Алаіза Пашкевіч</label>
+                    <label class="option"><input type="radio" name="q1" value="Вера Харужая"> Вера Харужая</label>
+                    <label class="option"><input type="radio" name="q1" value="Францішка Урсула Радзівіл"> Францішка Урсула Радзівіл</label>
+                </div>
+                <div class="explanation">Правільна: Алаіза Пашкевіч (Цётка) сумяшчала творчасць з працай медсястрой.</div>
+            </div>
+
+            <div class="question" data-ans="Анастасія Слуцкая">
+                <h3>2. Якая княгіня праславілася паспяховай абаронай Слуцка ад набегаў крымскіх татар у XVI стагоддзі?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q2" value="Соф’я Гальшанская"> Соф’я Гальшанская</label>
+                    <label class="option"><input type="radio" name="q2" value="Анастасія Слуцкая"> Анастасія Слуцкая</label>
+                    <label class="option"><input type="radio" name="q2" value="Княгіня Вольга"> Княгіня Вольга</label>
+                </div>
+                <div class="explanation">Правільна: Анастасія Слуцкая ўзначаліла абарону горада пасля смерці мужа.</div>
+            </div>
+
+            <div class="question" data-ans="Арына Сабаленка">
+                <h3>3. Якая беларуская тэнісістка стала першай ракеткай свету і неаднаразовай пераможцай турніраў Вялікага шлема?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q3" value="Вольга Корбут"> Вольга Корбут</label>
+                    <label class="option"><input type="radio" name="q3" value="Юлія Несцярэнка"> Юлія Несцярэнка</label>
+                    <label class="option"><input type="radio" name="q3" value="Арына Сабаленка"> Арына Сабаленка</label>
+                </div>
+                <div class="explanation">Правільна: Арына Сабаленка — зорка сусветнага тэніса сучаснасці.</div>
+            </div>
+
+            <div class="question" data-ans="Вера Харужая">
+                <h3>4. Чыім імем названа знакамітая вуліца ў Мінску ў гонар гераіні-падпольшчыцы, якая загінула ў гады Вялікай Айчыннай вайны?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q4" value="Вера Харужая"> Вера Харужая</label>
+                    <label class="option"><input type="radio" name="q4" value="Алаіза Пашкевіч"> Алаіза Пашкевіч</label>
+                    <label class="option"><input type="radio" name="q4" value="Марына Васілеўская"> Марына Васілеўская</label>
+                </div>
+                <div class="explanation">Правільна: Вера Харужая — Герой Савецкага Саюза.</div>
+            </div>
+
+            <div class="question" data-ans="Вольга Корбут">
+                <h3>5. Хто ўвайшоў у гісторыю гімнастыкі як «Пятля Корбут» і «Цуда з Гродна»?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q5" value="Дар’я Домрачава"> Дар’я Домрачава</label>
+                    <label class="option"><input type="radio" name="q5" value="Вольга Корбут"> Вольга Корбут</label>
+                    <label class="option"><input type="radio" name="q5" value="Юлія Несцярэнка"> Юлія Несцярэнка</label>
+                </div>
+                <div class="explanation">Правільна: Вольга Корбут зрабіла рэвалюцыю ў спартыўнай гімнастыцы.</div>
+            </div>
+
+            <div class="question" data-ans="Ганна Тумаркіна">
+                <h3>6. Хто стала першай у Еўропе жанчынай — прафесарам філасофіі, якая выкладала ў Бернскім універсітэце?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q6" value="Ганна Тумаркіна"> Ганна Тумаркіна</label>
+                    <label class="option"><input type="radio" name="q6" value="Соф'я Кавалеўская"> Соф'я Кавалеўская</label>
+                    <label class="option"><input type="radio" name="q6" value="Любоў Хатылёва"> Любоў Хатылёва</label>
+                </div>
+                <div class="explanation">Правільна: Ганна Тумаркіна была першай жанчынай, якая падрыхтавала дактароў навук у Еўропе.</div>
+            </div>
+
+            <div class="question" data-ans="Дар’я Домрачава">
+                <h3>7. Якая біятланістка з’яўляецца першай у гісторыі чатырохразовай алімпійскай чэмпіёнкай і Героем Беларусі?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q7" value="Юлія Несцярэнка"> Юлія Несцярэнка</label>
+                    <label class="option"><input type="radio" name="q7" value="Дар’я Домрачава"> Дар’я Домрачава</label>
+                    <label class="option"><input type="radio" name="q7" value="Арына Сабаленка"> Арына Сабаленка</label>
+                </div>
+                <div class="explanation">Правільна: Дар’я Домрачава — самая тытулаваная беларуская спартсменка.</div>
+            </div>
+
+            <div class="question" data-ans="Ефрасіння Полацкая">
+                <h3>8. Хто лічыцца нябеснай заступніцай Беларусі і заснавальніцай жаночага манастыра ў Полацку ў XII стагоддзі?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q8" value="Княгіня Вольга"> Княгіня Вольга</label>
+                    <label class="option"><input type="radio" name="q8" value="Соф’я Гальшанская"> Соф’я Гальшанская</label>
+                    <label class="option"><input type="radio" name="q8" value="Ефрасіння Полацкая"> Ефрасіння Полацкая</label>
+                </div>
+                <div class="explanation">Правільна: Ефрасіння Полацкая была выдатнай асветніцай.</div>
+            </div>
+
+            <div class="question" data-ans="Княгіня Вольга">
+                <h3>9. Якая гістарычная постаць здзейсніла дыпламатычны візіт у Канстанцінопаль у 957 годзе і прыняла там хрост?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q9" value="Анастасія Слуцкая"> Анастасія Слуцкая</label>
+                    <label class="option"><input type="radio" name="q9" value="Княгіня Вольга"> Княгіня Вольга</label>
+                    <label class="option"><input type="radio" name="q9" value="Соф’я Гальшанская"> Соф’я Гальшанская</label>
+                </div>
+                <div class="explanation">Правільна: Княгіня Вольга была першай хрысціянскай кіраўніцай Русі.</div>
+            </div>
+
+            <div class="question" data-ans="Любоў Хатылёва">
+                <h3>10. Хто з’яўляецца выдатным вучоным-генетыкам і Ганаровым прэзідэнтам Беларускага таварыства генетыкаў і селекцыянераў?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q10" value="Любоў Хатылёва"> Любоў Хатылёва</label>
+                    <label class="option"><input type="radio" name="q10" value="Ганна Тумаркіна"> Ганна Тумаркіна</label>
+                    <label class="option"><input type="radio" name="q10" value="Марына Васілеўская"> Марына Васілеўская</label>
+                </div>
+                <div class="explanation">Правільна: Любоў Хатылёва — акадэмік, якая ўнесла вялікі ўклад у аграрную навуку.</div>
+            </div>
+
+            <div class="question" data-ans="Марына Васілеўская">
+                <h3>11. Хто ў 2024 годзе стала першай жанчынай-касманаўтам у гісторыі незалежнай Беларусі?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q11" value="Вера Харужая"> Вера Харужая</label>
+                    <label class="option"><input type="radio" name="q11" value="Марына Васілеўская"> Марына Васілеўская</label>
+                    <label class="option"><input type="radio" name="q11" value="Любоў Хатылёва"> Любоў Хатылёва</label>
+                </div>
+                <div class="explanation">Правільна: Марына Васілеўская здзейсніла палёт на МКС у складзе міжнароднага экіпажа.</div>
+            </div>
+
+            <div class="question" data-ans="Соф’я Гальшанская">
+                <h3>12. Якая каралева стала родапачынальніцай дынастыі Ягелонаў, што кіравала ў Вялікім Княстве Літоўскім і Польшчы?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q12" value="Анастасія Слуцкая"> Анастасія Слуцкая</label>
+                    <label class="option"><input type="radio" name="q12" value="Ефрасіння Полацкая"> Ефрасіння Полацкая</label>
+                    <label class="option"><input type="radio" name="q12" value="Соф’я Гальшанская"> Соф’я Гальшанская</label>
+                </div>
+                <div class="explanation">Правільна: Соф’я Гальшанская была маці каралёў.</div>
+            </div>
+
+            <div class="question" data-ans="Соф'я Кавалеўская">
+                <h3>13. Якая сусветна вядомая жанчына-матэматык правяла дзяцінства ў родавым маёнтку Палібіна (на мяжы сучаснай Беларусі)?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q13" value="Соф'я Кавалеўская"> Соф'я Кавалеўская</label>
+                    <label class="option"><input type="radio" name="q13" value="Ганна Тумаркіна"> Ганна Тумаркіна</label>
+                    <label class="option"><input type="radio" name="q13" value="Любоў Хатылёва"> Любоў Хатылёва</label>
+                </div>
+                <div class="explanation">Правільна: Соф'я Кавалеўская стала першай жанчынай-прафесарам матэматыкі ў свеце.</div>
+            </div>
+
+            <div class="question" data-ans="Францішка Урсула Радзівіл">
+                <h3>14. Хто была першай жанчынай-драматургам у ВКЛ і заснавала знакаміты тэатр у Нясвіжы?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q14" value="Алаіза Пашкевіч"> Алаіза Пашкевіч</label>
+                    <label class="option"><input type="radio" name="q14" value="Францішка Урсула Радзівіл"> Францішка Урсула Радзівіл</label>
+                    <label class="option"><input type="radio" name="q14" value="Соф’я Гальшанская"> Соф’я Гальшанская</label>
+                </div>
+                <div class="explanation">Правільна: Францішка Радзівіл ператварыла Нясвіж у культурны цэнтр свайго часу.</div>
+            </div>
+
+            <div class="question" data-ans="Юлія Несцярэнка">
+                <h3>15. Якую беларускую бягуху празвалі «Белай маланкай» пасля яе перамогі на дыстанцыі 100 метраў на Алімпіядзе-2004 у Афінах?</h3>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q15" value="Дар’я Домрачава"> Дар’я Домрачава</label>
+                    <label class="option"><input type="radio" name="q15" value="Юлія Несцярэнка"> Юлія Несцярэнка</label>
+                    <label class="option"><input type="radio" name="q15" value="Арына Сабаленка"> Арына Сабаленка</label>
+                </div>
+                <div class="explanation">Правільна: Юлія Несцярэнка стала першай алімпійскай чэмпіёнкай на гэтай дыстанцыі не з ЗША.</div>
+            </div>
+
+            <button type="button" id="submit-btn">Даведацца вынік</button>
+        </form>
+
+        <div id="result-area"></div>
+    </main>
+
+
+<script>
+    document.getElementById('submit-btn').addEventListener('click', function() {
+        const questions = document.querySelectorAll('.question');
+        let score = 0;
+
+        questions.forEach(q => {
+            const correctVal = q.getAttribute('data-ans');
+            const selected = q.querySelector('input[type="radio"]:checked');
+            const options = q.querySelectorAll('.option');
+            const expl = q.querySelector('.explanation');
+
+            options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+
+            if (selected) {
+                if (selected.value === correctVal) {
+                    score++;
+                    selected.parentElement.classList.add('correct');
+                } else {
+                    selected.parentElement.classList.add('incorrect');
+                    options.forEach(opt => {
+                        if (opt.innerText.trim().includes(correctVal)) opt.classList.add('correct');
+                    });
+                }
+            } else {
+                options.forEach(opt => {
+                    if (opt.innerText.trim().includes(correctVal)) opt.classList.add('correct');
+                });
+            }
+            expl.style.display = 'block';
+        });
+
+        const result = document.getElementById('result-area');
+        result.style.display = 'block';
+        result.innerText = `Ваш вынік: ${score} з ${questions.length}`;
+        
+        if (score === questions.length) {
+            result.style.color = '#27ae60';
+        } else if (score > 10) {
+            result.style.color = '#2980b9';
+        } else {
+            result.style.color = '#e67e22';
+        }
+
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+</script>
+<footer class="block">
+        <div class="footer_txt_cont">
+            <p class="footer_txt">Зроблена вучнямі Гімназіі №7 г. Віцебска Сяргеенка Даніілам, Рой Дар’яй, Барчанка Марыяй</p>
+        </div>
+    </footer>
+</body>
+</html>
